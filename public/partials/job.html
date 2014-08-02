@@ -1,0 +1,47 @@
+<!-- home.html -->
+<div class="jumbotron text-center">
+    <h1>Job/Internship Applications</h1>
+</div>
+
+<!--<h2 class="sub-header jumbotron">Companies</h2>-->
+<div class="table-responsive jumbotron">
+
+    <a class="btn btn-default btn-sm" href="#add-company">
+        <i class="fa fa-plus"></i> Add Company</a>
+
+    <div class="table-responsive jumbotron">
+    <!--<form class="navbar-form navbar-left" role="search">-->
+        <!--<div class="form-group">-->
+            <!--<input type="text" class="form-control" placeholder="Enter Company Name" ng-model="companyName">-->
+            <!--<input type="text" class="form-control" placeholder="Enter link for careers" ng-model="companyLink">-->
+            <!--<textarea type="text" class="form-control" placeholder="Other information about company" ng-model="companyInfo"></textarea>-->
+        <!--</div>-->
+        <!--<div><button type="submit" class="btn btn-default" ng-click="saveCompany()">Save</button></div>-->
+    <!--</form>-->
+    <!--</div>-->
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <!--<th>#</th>-->
+            <th>Company Name</th>
+            <th>Careers Link</th>
+            <th>Additional Info</th>
+            <!--<th></th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="company in companies">
+            <!--<td></td>-->
+            <td>{{company.name}}</td>
+            <td><a href="{{company.careers}}">careers link</a> </td>
+            <td>{{company.info}}</td>
+            <!--<td>sit</td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+</div>
+

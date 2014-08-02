@@ -1,0 +1,15 @@
+{
+  "name": "student-utilities",
+  "version": "0.0.0",
+  "description": "Manage Student Utilities",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Harsha HS",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.7.2",
+    "mongoose": "^3.8.14"
+  }
+}
