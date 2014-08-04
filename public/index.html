@@ -34,10 +34,11 @@
             <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
             <!--<li><a href="#about"><i class="fa fa-shield"></i> About</a></li>-->
             <li><a href="#schedule"><i class="fa fa-calendar"></i> Schedule</a></li>
-            <li><a href="#jobs"><i class="fa fa-desktop"></i> Jobs</a></li>
+            <li><a href="#applications"><i class="fa fa-folder-open"></i> Applications</a></li>
+            <li><a href="#companies"><i class="fa fa-building"></i> Companies</a></li>
             <li><a href="#courses"><i class="fa fa-book"></i> Courses</a></li>
             <!--<li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>-->
-            <li><a href="#signin"><i class="fa fa-user"></i> Signin</a></li>
+            <li ng-show="userEmail==''"><a href="#signin"><i class="fa fa-user"></i> Signin</a></li>
             <!--<li><a class="btn btn-default btn-sm">-->
                 <!--<i class="fa fa-user"></i> {{userEmail}}</a></li>-->
         </ul>
@@ -59,8 +60,9 @@
 <!--</footer>-->
 
 </body>
+
+<script src="js/controllers/company-controller.js"></script>
 <script src="js/controllers/user-controller.js"></script>
-<script src="js/controllers/job-controller.js"></script>
 <script src="js/controllers/main-controller.js"></script>
 
 </html>

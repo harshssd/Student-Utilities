@@ -3,46 +3,35 @@
  */
 var utilities = angular.module('jobApplications', [
     'ngRoute',
-    'mainController', 'jobController', 'userController'
+    'mainController', 'userController', 'companyController'
 ]);
 
 utilities.config(function($routeProvider){
+
     $routeProvider
 
         .when('/', {
             templateUrl: 'partials/home.html',
             controller: 'mainController'
         })
-        .when('/jobs', {
-            templateUrl: 'partials/job.html',
-            controller: 'jobController'
-        })
+//        .when('/applications', {
+//            templateUrl: 'partials/job.html',
+//            controller: 'jobController'
+//        })
         .when('/add-company', {
             templateUrl: 'partials/add-company.html',
-            controller: 'jobController'
+            controller: 'companyController'
+        })
+        .when('/schedule', {
+            templateUrl: 'partials/schedule.html',
+            controller: 'mainController'
+        })
+        .when('/companies', {
+            templateUrl: 'partials/companies.html',
+            controller: 'companyController'
         })
         .when('/signin', {
             templateUrl: 'partials/signin.html',
             controller: 'userController'
         });
-//        .when('/about', {
-//            templateUrl: 'partials/about.html',
-//            controller: 'aboutController'
-//        });
-
 });
-
-//// create the controller and inject Angular's $scope
-//utilities.controller('mainController', function($scope) {
-//
-//    $scope.companies = [
-//        {name: "Google", careers:"http://www.google.com/about/careers/", info:"world leader in software"},
-//        {name: "Google", careers:"http://www.google.com/about/careers/", info:"world leader in software"},
-//        {name: "Google", careers:"http://www.google.com/about/careers/", info:"world leader in software"}
-//    ];
-//
-//});
-//
-//utilities.controller('aboutController', function($scope) {
-////    $scope.message = 'Look! I am an about page.';
-//});

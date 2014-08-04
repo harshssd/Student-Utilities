@@ -5,6 +5,9 @@ angular.module("mainController", [])
 
     .controller("mainController", function($scope){
 
+        $scope.userEmail = "";
+        $scope.userPassword = "";
+
         $scope.companies = [
             {name: "Google", careers:"http://www.google.com/about/careers/", info:"world leader in software"},
             {name: "Google", careers:"http://www.google.com/about/careers/", info:"world leader in software"},

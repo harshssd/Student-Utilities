@@ -5,12 +5,12 @@ angular.module('userController', [])
 
     .controller('userController', function($scope, $location){
 
-        $scope.signin = function(){
+           $scope.signin = function(){
 
 //            email = $scope.userEmail;
 //            password = $scope.userPassword;
 
-            alert("Signed In");
+            alert($scope.userEmail);
 
 //            $scope.userEmail = "";
 //            $scope.userPassword = "";
