@@ -1,9 +1,10 @@
 /**
  * Created by harsha on 8/1/14.
  */
-var utilities = angular.module('jobApplications', [
+var utilities = angular.module('StudentUtilities', [
     'ngRoute',
-    'mainController', 'userController', 'companyController'
+    'mainController', 'userController', 'companyController',
+    'userService'
 ]);
 
 utilities.config(function($routeProvider){
@@ -29,6 +30,10 @@ utilities.config(function($routeProvider){
         .when('/companies', {
             templateUrl: 'partials/companies.html',
             controller: 'companyController'
+        })
+        .when('/signup', {
+            templateUrl: 'partials/signup.html',
+            controller: 'userController'
         })
         .when('/signin', {
             templateUrl: 'partials/signin.html',

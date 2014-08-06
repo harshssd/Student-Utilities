@@ -3,15 +3,14 @@
  */
 angular.module("mainController", [])
 
-    .controller("mainController", function($scope){
+    .controller("mainController", function($scope, UserLocal){
 
-        $scope.userEmail = "";
-        $scope.userPassword = "";
+        $scope.user = UserLocal;
 
         $scope.companies = [
-            {name: "Google", careers:"http://www.google.com/about/careers/", info:"world leader in software"},
-            {name: "Google", careers:"http://www.google.com/about/careers/", info:"world leader in software"},
-            {name: "Google", careers:"http://www.google.com/about/careers/", info:"world leader in software"}
+            {name: "Google", careers:"http://www.google.com/about/careers/", info:"Search Engine, Android, Chrome"},
+            {name: "Microsoft", careers:"http://www.microsoft.com/careers/", info:"Windows, Nokia, Office"},
+            {name: "Amazon", careers:"http://www.amazon.com/careers/", info:"Cloud, Web Services, E-commerce "}
         ];
 
     });
