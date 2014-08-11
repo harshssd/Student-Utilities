@@ -5,6 +5,7 @@ angular.module('userController', [])
 
     .controller('userController', function($scope, $location, Users, UserLocal){
 
+           //share user data with mainController
            $scope.user = UserLocal;
 
            $scope.signup = function(){
@@ -32,10 +33,7 @@ angular.module('userController', [])
                                    $scope.user.loggedIn = true;
                                    alert("User with email "+$scope.user.email+" is created");
                                    $location.path('/');
-                                   $scope.user.email = "";
-                                   $scope.user.password = "";
-                                   $scope.user.university = "";
-                                   $scope.user.specialization = "";
+                                   sessionStorage.email = $scope.user.email;
                                });
                         }
                    });
@@ -50,6 +48,7 @@ angular.module('userController', [])
                             alert("You are logged in");
                             $scope.user.loggedIn = true;
                             $location.path('/');
+                            sessionStorage.email = $scope.user.email;
                         }
                         else
                             alert("Enter correct email and password");

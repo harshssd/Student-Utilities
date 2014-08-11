@@ -19,7 +19,8 @@ mongoose.connect(database.url);
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser()); 						// pull information from html in POST
 
-require('./app/routes.js')(app);
+require('./app/routes-users.js')(app);
+require('./app/routes-companies.js')(app);
 
 // application -------------------------------------------------------------
 app.get('/', function(req, res) {

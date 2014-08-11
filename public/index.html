@@ -38,7 +38,8 @@
             <li><a href="#companies"><i class="fa fa-building"></i> Companies</a></li>
             <li><a href="#courses"><i class="fa fa-book"></i> Courses</a></li>
             <!--<li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>-->
-            <li><a href="#signin"><i class="fa fa-user"></i> Signin</a></li>
+            <li ng-hide="user.loggedIn==true"><a href="#signin"><i class="fa fa-user"></i> Signin</a></li>
+            <li ng-show="user.loggedIn==true"><a ng-click="signout()"><i class="fa fa-user"></i> Signout</a></li>
             <!--<li><a class="btn btn-default btn-sm">-->
                 <!--<i class="fa fa-user"></i> {{userEmail}}</a></li>-->
         </ul>
@@ -61,6 +62,7 @@
 
 </body>
 
+<script src="js/services/companies-service.js"></script>
 <script src="js/services/user-service.js"></script>
 <script src="js/controllers/user-controller.js"></script>
 <script src="js/controllers/company-controller.js"></script>

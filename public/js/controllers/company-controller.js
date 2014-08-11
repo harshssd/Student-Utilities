@@ -3,14 +3,22 @@
  */
 angular.module('companyController', [])
 
-    .controller('companyController', function($scope, $location){
+    .controller('companyController', function($scope, $location, Companies){
+
+        //populate with companies existing in db
+        Companies.get()
+            .success(function(companies){
+                $scope.companies = companies;
+            });
 
         $scope.saveCompany = function(){
-            alert($scope.user.email);
-            var company = {name:$scope.companyName, careers: $scope.companyLink, info: $scope.companyInfo};
-            $scope.companies.push(company);
+            var tagsArray = $scope.companyTags.split(",");
+            var company = {name:$scope.companyName, url: $scope.companyUrl, tags: tagsArray, createdBy: $scope.user.email};
+            Companies.create(company)
+                .success(function(data){
+                    $scope.companies.push(company);
+                });
             $location.path('/companies');
-            alert('Saved');
         };
 
 

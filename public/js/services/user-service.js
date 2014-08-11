@@ -24,5 +24,5 @@ angular.module('userService', [])
     })
 
     .factory('UserLocal', function(){
-        return({loggedIn:false})
+        return({loggedIn:false, email:""})
     });

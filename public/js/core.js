@@ -4,7 +4,7 @@
 var utilities = angular.module('StudentUtilities', [
     'ngRoute',
     'mainController', 'userController', 'companyController',
-    'userService'
+    'userService', 'companiesService'
 ]);
 
 utilities.config(function($routeProvider){
